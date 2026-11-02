@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#141414"/>
+    </marker>
+    <marker id="c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E2683A"/>
+    </marker>
+    <style>
+      .box{fill:#FFFFFF;stroke:#141414;stroke-width:2}
+      .dark{fill:#141414}
+      .coral{fill:#FFF1EA;stroke:#FF8A5B;stroke-width:2.5}
+      .gate{fill:#FFFFFF;stroke:#E2683A;stroke-width:2.5;stroke-dasharray:7 5}
+      .h{font-weight:600;font-size:21px;fill:#141414}
+      .hw{font-weight:600;font-size:21px;fill:#FFFFFF}
+      .n{font-weight:600;font-size:14px;fill:#E2683A;letter-spacing:1px}
+      .s{font-size:14.5px;fill:#4A4A4A}
+      .sw{font-size:14.5px;fill:#CFCFCF}
+      .lbl{font-size:13.5px;fill:#141414}
+      .clbl{font-size:13.5px;fill:#B5502A;font-weight:600}
+      .title{font-weight:600;font-size:30px;fill:#141414}
+      .sub{font-size:16px;fill:#4A4A4A}
+      .line{stroke:#141414;stroke-width:2;fill:none}
+      .cline{stroke:#E2683A;stroke-width:2;fill:none;stroke-dasharray:6 5}
+    </style>
+  </defs>
+
+  <rect width="1600" height="1040" fill="#FAF8F5"/>
+  <text x="60" y="64" class="title">Reel pipeline: raw talking-head take to finished 9:16 reel</text>
+  <text x="60" y="94" class="sub">Python plans every decision as data; Remotion (React) draws every frame from it; one brand file feeds both.</text>
+
+  <!-- Row 1: input + Python preparation -->
+  <rect x="60" y="140" width="250" height="150" rx="10" class="box"/>
+  <text x="80" y="168" class="n">INPUT</text>
+  <text x="80" y="196" class="h">Raw recording</text>
+  <text x="80" y="222" class="s">Phone take, talking to camera</text>
+  <text x="80" y="244" class="s">English or Portuguese</text>
+  <text x="80" y="266" class="s">Read-only, never edited</text>
+
+  <rect x="360" y="140" width="300" height="150" rx="10" class="box"/>
+  <text x="380" y="168" class="n">1 · CUT + TRANSCRIBE</text>
+  <text x="380" y="196" class="h">cut.py · transcribe.py</text>
+  <text x="380" y="222" class="s">faster-whisper (medium, multilingual)</text>
+  <text x="380" y="244" class="s">Removes silences, fillers, repeats</text>
+  <text x="380" y="266" class="s">Word-level timings for captions</text>
+
+  <rect x="710" y="140" width="300" height="150" rx="10" class="box"/>
+  <text x="730" y="168" class="n">1a · GRADE + VOICE</text>
+  <text x="730" y="196" class="h">grade.py · clean</text>
+  <text x="730" y="222" class="s">Auto exposure + white balance</text>
+  <text x="730" y="244" class="s">Brand LUT (subtle), denoise voice</text>
+  <text x="730" y="266" class="s">Face found with YuNet (OpenCV)</text>
+
+  <rect x="1060" y="140" width="480" height="150" rx="10" class="box"/>
+  <text x="1080" y="168" class="n">2 · EDIT DECISIONS + B-ROLL</text>
+  <text x="1080" y="196" class="h">edit.json · broll.py</text>
+  <text x="1080" y="222" class="s">Mode preset (story, series, tutorial, myth, proof...)</text>
+  <text x="1080" y="244" class="s">Hook options, emphasis words, quote, end card CTA</text>
+  <text x="1080" y="266" class="s">Free visuals only: own photos, public-page screenshots, Pixabay</text>
+
+  <path d="M310,215 L356,215" class="line" marker-end="url(#a)"/>
+  <path d="M660,215 L706,215" class="line" marker-end="url(#a)"/>
+  <path d="M1010,215 L1056,215" class="line" marker-end="url(#a)"/>
+
+  <!-- Row 2: planner -->
+  <rect x="60" y="360" width="1480" height="190" rx="12" class="dark"/>
+  <text x="90" y="392" class="n">3 · PLAN</text>
+  <text x="90" y="422" class="hw">plan.py + motion.py: every visual decision becomes data (props.json)</text>
+  <rect x="90" y="445" width="270" height="80" rx="8" fill="#232323" stroke="#3A3A3A"/>
+  <text x="108" y="474" class="hw" style="font-size:17px">Captions</text>
+  <text x="108" y="500" class="sw">3 words a page, serif accents</text>
+  <rect x="380" y="445" width="270" height="80" rx="8" fill="#232323" stroke="#3A3A3A"/>
+  <text x="398" y="474" class="hw" style="font-size:17px">Icons + SFX cues</text>
+  <text x="398" y="500" class="sw">On the spoken word, off the face</text>
+  <rect x="670" y="445" width="270" height="80" rx="8" fill="#232323" stroke="#3A3A3A"/>
+  <text x="688" y="474" class="hw" style="font-size:17px">Motion step</text>
+  <text x="688" y="500" class="sw">15 graphics, one every 4-6 s</text>
+  <rect x="960" y="445" width="270" height="80" rx="8" fill="#232323" stroke="#3A3A3A"/>
+  <text x="978" y="474" class="hw" style="font-size:17px">Camera + cover</text>
+  <text x="978" y="500" class="sw">Push-ins, slides capped at 1.15x</text>
+  <rect x="1250" y="445" width="260" height="80" rx="8" fill="#232323" stroke="#3A3A3A"/>
+  <text x="1268" y="474" class="hw" style="font-size:17px">Report + SRT</text>
+  <text x="1268" y="500" class="sw">Why each choice was made</text>
+
+  <path d="M510,290 L510,356" class="line" marker-end="url(#a)"/>
+  <path d="M1300,290 L1300,356" class="line" marker-end="url(#a)"/>
+
+  <!-- Row 3: Remotion + checks -->
+  <rect x="60" y="620" width="560" height="190" rx="10" class="box"/>
+  <text x="80" y="648" class="n">REMOTION COMPOSITION (REACT + TYPESCRIPT)</text>
+  <text x="80" y="678" class="h">Reel.tsx draws each frame from props</text>
+  <text x="80" y="706" class="s">Hook card · captions · b-roll cards and split screens</text>
+  <text x="80" y="728" class="s">Motion graphics: typing prompt, cursor click, route map</text>
+  <text x="80" y="750" class="s">(MapLibre), phone, counter, stat card, quote, grain</text>
+  <text x="80" y="772" class="s">End card with wordmark and CTA</text>
+  <text x="80" y="794" class="s">Frame-driven animation only (spring / interpolate)</text>
+
+  <rect x="680" y="620" width="380" height="190" rx="10" class="gate"/>
+  <text x="700" y="648" class="n">4 · STILLS + EDGE CHECK (GATE)</text>
+  <text x="700" y="678" class="h">Review before any render</text>
+  <text x="700" y="706" class="s">Hook, middle and end stills with</text>
+  <text x="700" y="728" class="s">safe-area and face keep-out guides</text>
+  <text x="700" y="750" class="s">Every frame over a magenta probe:</text>
+  <text x="700" y="772" class="s">any empty or black edge fails</text>
+  <text x="700" y="794" class="clbl">Creator approves the stills</text>
+
+  <rect x="1120" y="620" width="420" height="190" rx="10" class="box"/>
+  <text x="1140" y="648" class="n">5 · RENDER</text>
+  <text x="1140" y="678" class="h">reel.py render</text>
+  <text x="1140" y="706" class="s">Refuses props without an edge-check pass</text>
+  <text x="1140" y="728" class="s">H.264 on Intel Quick Sync (CPU fallback)</text>
+  <text x="1140" y="750" class="s">Loudness to -14 LUFS, -1.5 dBTP</text>
+  <text x="1140" y="772" class="s">One video + SRT, never overwrites (_v2, _v3)</text>
+
+  <path d="M800,550 L800,580 L340,580 L340,616" class="line" marker-end="url(#a)"/>
+  <path d="M620,715 L676,715" class="line" marker-end="url(#a)"/>
+  <path d="M1060,715 L1116,715" class="line" marker-end="url(#a)"/>
+  <text x="352" y="604" class="lbl">props.json</text>
+
+  <!-- Row 4: brand source of truth -->
+  <rect x="60" y="880" width="560" height="120" rx="10" class="coral"/>
+  <text x="80" y="908" class="n">SINGLE SOURCE OF TRUTH</text>
+  <text x="80" y="938" class="h">src/brand.ts</text>
+  <text x="80" y="964" class="s">Fonts, colours, safe areas, timings, volumes, encoder flags,</text>
+  <text x="80" y="986" class="s">Whisper settings. Plain object literal, no imports.</text>
+
+  <rect x="680" y="880" width="380" height="120" rx="10" class="coral"/>
+  <text x="700" y="908" class="n">BRIDGE</text>
+  <text x="700" y="938" class="h">brand_dump.mjs → JSON</text>
+  <text x="700" y="964" class="s">Read once by common.py; every</text>
+  <text x="700" y="986" class="s">Python step imports BRAND</text>
+
+  <path d="M340,880 L340,814" class="cline" marker-end="url(#c)"/>
+  <text x="352" y="852" class="clbl">imported by components</text>
+  <path d="M620,940 L676,940" class="cline" marker-end="url(#c)"/>
+  <path d="M1060,960 L1090,960 L1090,556" class="cline" marker-end="url(#c)"/>
+  <text x="1110" y="900" class="clbl">read by every Python step</text>
+  <text x="1110" y="922" class="clbl">(cut, plan, edge check, render)</text>
+
+  <text x="1540" y="990" class="s" text-anchor="end">Output: 1080x1920, 30 fps, MP4 + SRT</text>
+</svg>
